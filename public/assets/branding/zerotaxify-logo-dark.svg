@@ -17,6 +17,6 @@
   <path d="M40.9 44.1L43.1 46.4L47.4 41.8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
   <text x="72" y="38" fill="#F2F7FF" stroke="#1E3A72" stroke-width="0.35" font-family="Sora, Outfit, Arial, sans-serif" font-size="29" font-weight="770" letter-spacing="-0.5">Zero</text>
-  <text x="133" y="38" fill="url(#logoGradAD)" font-family="Sora, Outfit, Arial, sans-serif" font-size="29" font-weight="840" letter-spacing="-0.5">Taxify</text>
+  <text x="133" y="38" fill="#49B9FF" font-family="Sora, Outfit, Arial, sans-serif" font-size="29" font-weight="840" letter-spacing="-0.5">Taxify</text>
   <text x="74" y="56" fill="#B8CAED" font-family="Outfit, Arial, sans-serif" font-size="9.2" font-weight="700" letter-spacing="1.1">INDIA | CORPORATE | USA TAX SOLUTIONS</text>
 </svg>

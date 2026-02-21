@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { testimonials } from '@/lib/siteData';
 
 export default function TestimonialCards({ limit = null }) {
@@ -6,19 +5,24 @@ export default function TestimonialCards({ limit = null }) {
 
   return (
     <div className="testimonial-grid">
-      {list.map((item) => (
-        <article className="card testimonial-card" key={`${item.name}-${item.location}`}>
-          <div className="profile">
-            <Image src={item.image} alt={item.name} width={56} height={56} unoptimized />
-            <div>
-              <strong>{item.name}</strong>
-              <p>{item.location}</p>
+      {list.map((item) => {
+        const avatar = item.gender === 'female' ? '👩' : item.gender === 'male' ? '👨' : '🧑';
+        return (
+          <article className="card testimonial-card" key={`${item.name}-${item.location}`}>
+            <div className="profile">
+              <span className={`avatar-badge ${item.gender || 'neutral'}`} aria-hidden="true">
+                {avatar}
+              </span>
+              <div>
+                <strong>{item.name}</strong>
+                <p>{item.location}</p>
+              </div>
             </div>
-          </div>
-          <p>“{item.text}”</p>
-          <div className="rating">★★★★★</div>
-        </article>
-      ))}
+            <p>“{item.text}”</p>
+            <div className="rating">★★★★★</div>
+          </article>
+        );
+      })}
     </div>
   );
 }

@@ -46,7 +46,7 @@ export default function ContactForm() {
     <form className="card" onSubmit={handleSubmit}>
       <h3 style={{ marginTop: 0 }}>Send a Consultation Request</h3>
       <p style={{ color: 'var(--muted)' }}>
-        Submissions are securely sent to <strong>ramjanalibaba2121@gmail.com</strong>.
+        Submissions are securely sent to <strong>Info@zerotaxify.com</strong>.
       </p>
 
       <div className="hidden-field" aria-hidden="true">

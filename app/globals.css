@@ -77,41 +77,41 @@ html[data-theme='dark'][data-style='sky'] {
 }
 
 html[data-style='ocean'] {
-  --bg: #eef8fd;
-  --surface: #fbfeff;
-  --surface-2: #e4f3fa;
-  --text: #0f2534;
-  --muted: #4f6f82;
-  --primary: #007ea7;
-  --primary-2: #00b894;
-  --accent: #ffc074;
-  --ring: rgba(0, 126, 167, 0.28);
-  --border: rgba(15, 37, 52, 0.14);
-  --shadow-sm: 0 12px 24px rgba(6, 31, 47, 0.09);
-  --shadow-lg: 0 30px 56px rgba(6, 31, 47, 0.16);
+  --bg: #eef4fa;
+  --surface: #ffffff;
+  --surface-2: #ddeaf7;
+  --text: #2d3f52;
+  --muted: #6a89a7;
+  --primary: #6a89a7;
+  --primary-2: #88bdf2;
+  --accent: #bdddfc;
+  --ring: rgba(106, 137, 167, 0.32);
+  --border: rgba(56, 75, 89, 0.16);
+  --shadow-sm: 0 12px 24px rgba(56, 75, 89, 0.08);
+  --shadow-lg: 0 30px 56px rgba(56, 75, 89, 0.16);
   --hero-grad:
-    radial-gradient(circle at 12% 14%, rgba(0, 126, 167, 0.2), transparent 40%),
-    radial-gradient(circle at 88% 4%, rgba(0, 184, 148, 0.2), transparent 34%),
-    linear-gradient(135deg, #f4fbff 0%, #e8f6ff 48%, #e9fbf7 100%);
+    radial-gradient(circle at 12% 12%, rgba(136, 189, 242, 0.2), transparent 40%),
+    radial-gradient(circle at 88% 3%, rgba(189, 221, 252, 0.22), transparent 35%),
+    linear-gradient(135deg, #f5f9fd 0%, #e9f1f9 48%, #f2f7fc 100%);
 }
 
 html[data-theme='dark'][data-style='ocean'] {
-  --bg: #04131b;
-  --surface: #092030;
-  --surface-2: #0b2638;
-  --text: #e8f6ff;
-  --muted: #9ab8cc;
-  --primary: #42bfe2;
-  --primary-2: #31d4b2;
-  --accent: #ffc378;
-  --ring: rgba(66, 191, 226, 0.36);
-  --border: rgba(154, 184, 204, 0.23);
-  --shadow-sm: 0 12px 26px rgba(1, 11, 16, 0.46);
-  --shadow-lg: 0 28px 56px rgba(1, 11, 16, 0.58);
+  --bg: #111923;
+  --surface: #1a2633;
+  --surface-2: #223243;
+  --text: #e7f0f9;
+  --muted: #bdddfc;
+  --primary: #88bdf2;
+  --primary-2: #6a89a7;
+  --accent: #bdddfc;
+  --ring: rgba(136, 189, 242, 0.36);
+  --border: rgba(106, 137, 167, 0.26);
+  --shadow-sm: 0 12px 26px rgba(5, 9, 14, 0.5);
+  --shadow-lg: 0 28px 56px rgba(5, 9, 14, 0.62);
   --hero-grad:
-    radial-gradient(circle at 10% 10%, rgba(66, 191, 226, 0.22), transparent 40%),
-    radial-gradient(circle at 88% 0%, rgba(49, 212, 178, 0.22), transparent 36%),
-    linear-gradient(135deg, #061626 0%, #072033 52%, #06231f 100%);
+    radial-gradient(circle at 10% 10%, rgba(136, 189, 242, 0.22), transparent 40%),
+    radial-gradient(circle at 88% 0%, rgba(106, 137, 167, 0.22), transparent 36%),
+    linear-gradient(135deg, #141d28 0%, #1a2735 52%, #172330 100%);
 }
 
 html[data-style='ruby'] {
@@ -236,6 +236,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -244,7 +246,7 @@ body {
   color: var(--text);
   line-height: 1.55;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -258,7 +260,8 @@ img {
 }
 
 .container {
-  width: min(1200px, 92vw);
+  width: min(1200px, 100%);
+  padding-inline: 14px;
   margin: 0 auto;
 }
 
@@ -317,16 +320,22 @@ main {
 
 .nav-shell {
   min-height: 76px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .zt-logo {
   display: inline-flex;
   align-items: center;
   width: 264px;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+
+.nav-logo {
+  min-width: 0;
 }
 
 .logo-dark {
@@ -343,9 +352,11 @@ html[data-theme='dark'] .logo-dark {
 
 .nav-links {
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   gap: 6px;
+  min-width: 0;
 }
 
 .nav-links a {
@@ -365,7 +376,12 @@ html[data-theme='dark'] .logo-dark {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  margin-left: auto;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
 }
 
 .sr-only {
@@ -1162,12 +1178,36 @@ textarea:focus {
   margin-bottom: 10px;
 }
 
-.testimonial-card .profile img {
+.testimonial-card .avatar-badge {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  object-fit: cover;
   border: 2px solid color-mix(in srgb, var(--primary) 24%, var(--surface));
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--surface) 92%, transparent),
+    color-mix(in srgb, var(--primary) 14%, transparent)
+  );
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.testimonial-card .avatar-badge.female {
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--surface) 92%, transparent),
+    color-mix(in srgb, #c476b1 20%, transparent)
+  );
+}
+
+.testimonial-card .avatar-badge.male {
+  background: linear-gradient(
+    140deg,
+    color-mix(in srgb, var(--surface) 92%, transparent),
+    color-mix(in srgb, var(--primary-2) 20%, transparent)
+  );
 }
 
 .testimonial-card .profile p {
@@ -1522,6 +1562,10 @@ textarea {
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
+  .nav-shell {
+    gap: 10px;
+  }
+
   .nav-links.open {
     opacity: 1;
     pointer-events: auto;
@@ -1539,11 +1583,27 @@ textarea {
 
 @media (max-width: 760px) {
   .section {
-    padding: 66px 0;
+    padding: 60px 0;
+  }
+
+  .container {
+    padding-inline: 10px;
+  }
+
+  .nav-shell {
+    min-height: 68px;
+    gap: 8px;
   }
 
   .zt-logo {
-    width: 226px;
+    width: clamp(150px, 46vw, 186px);
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
   }
 
   .service-grid,
@@ -1589,5 +1649,9 @@ textarea {
 
   .taxcaster-tabs {
     grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    top: 68px;
   }
 }

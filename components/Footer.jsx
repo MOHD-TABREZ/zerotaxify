@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import Logo from '@/components/Logo';
 
+const CAL_URL = 'https://cal.com/zerotaxify';
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -23,9 +25,9 @@ export default function Footer() {
           <p className="eyebrow">Need Expert Filing Help?</p>
           <h3>Get a personalized tax strategy in one consultation.</h3>
         </div>
-        <Link href="/contact" className="btn btn-secondary">
-          Book now <ArrowRight size={15} />
-        </Link>
+        <a href={CAL_URL} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+          Schedule a Call <ArrowRight size={15} />
+        </a>
       </div>
 
       <div className="container footer-grid">
@@ -113,13 +115,13 @@ export default function Footer() {
               <span className="contact-icon">
                 <Mail size={15} />
               </span>
-              <span>ramjanalibaba2121@gmail.com</span>
+              <span>Info@zerotaxify.com</span>
             </li>
             <li>
               <span className="contact-icon">
                 <MapPinned size={15} />
               </span>
-              <span>LB Nagar, Hyderabad, India</span>
+              <span>30N Gould St, Sherdian, WY 82801, USA</span>
             </li>
             <li>
               <span className="contact-icon">

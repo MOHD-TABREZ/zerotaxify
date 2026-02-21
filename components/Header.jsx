@@ -5,7 +5,6 @@ import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import Logo from '@/components/Logo';
-import StylePicker from '@/components/StylePicker';
 import ThemeToggle from '@/components/ThemeToggle';
 
 const links = [
@@ -41,7 +40,6 @@ export default function Header() {
         </nav>
 
         <div className="nav-actions">
-          <StylePicker />
           <ThemeToggle />
           <button
             className="menu-toggle"

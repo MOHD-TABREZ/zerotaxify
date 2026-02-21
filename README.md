@@ -26,7 +26,7 @@ Production-ready multi-page website for ZeroTaxify using Next.js App Router.
   - Honeypot anti-spam field
   - Server-side schema validation
   - Basic IP rate limiting
-  - SMTP email delivery to `ramjanalibaba2121@gmail.com`
+  - SMTP email delivery to `Info@zerotaxify.com`
 
 ## Tax Calculator
 The calculator supports:

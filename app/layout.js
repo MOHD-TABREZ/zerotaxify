@@ -15,18 +15,18 @@ const themeBootScript = `
   try {
     var stored = localStorage.getItem('zt-theme');
     var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    var style = localStorage.getItem('zt-style') || 'sky';
     document.documentElement.setAttribute('data-theme', theme);
-    document.documentElement.setAttribute('data-style', style);
+    document.documentElement.setAttribute('data-style', 'ocean');
+    localStorage.setItem('zt-style', 'ocean');
   } catch (e) {
     document.documentElement.setAttribute('data-theme', 'light');
-    document.documentElement.setAttribute('data-style', 'sky');
+    document.documentElement.setAttribute('data-style', 'ocean');
   }
 })();`;
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="light" data-style="sky" suppressHydrationWarning>
+    <html lang="en" data-theme="light" data-style="ocean" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
       </head>

@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 export const runtime = 'nodejs';
 
-const RECIPIENT = 'ramjanalibaba2121@gmail.com';
+const RECIPIENT = process.env.CONTACT_TO || 'Info@zerotaxify.com';
 const WINDOW_MS = 15 * 60 * 1000;
 const MAX_REQUESTS = 5;
 const ipHits = new Map();

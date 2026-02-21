@@ -3,6 +3,8 @@ import ServiceCards from '@/components/ServiceCards';
 import TaxCalculator from '@/components/TaxCalculator';
 import TestimonialCards from '@/components/TestimonialCards';
 
+const CAL_URL = 'https://cal.com/zerotaxify';
+
 export default function HomePage() {
   return (
     <main>
@@ -17,7 +19,7 @@ export default function HomePage() {
             </p>
             <div className="hero-cta">
               <Link className="btn btn-primary" href="/contact">Get Started</Link>
-              <Link className="btn btn-secondary" href="/contact">Book Consultation</Link>
+              <a className="btn btn-secondary" href={CAL_URL} target="_blank" rel="noopener noreferrer">Schedule a Call</a>
             </div>
             <div className="hero-badges">
               <span>ISO-style process controls</span>
@@ -142,7 +144,7 @@ export default function HomePage() {
               <h3 style={{ margin: 0 }}>Free Consultation for New Clients</h3>
               <p>Get an expert review of your filing profile before you submit.</p>
             </div>
-            <Link className="btn btn-secondary" href="/contact">Claim Free Consultation</Link>
+            <a className="btn btn-secondary" href={CAL_URL} target="_blank" rel="noopener noreferrer">Schedule a Call</a>
           </div>
         </div>
       </section>

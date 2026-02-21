@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import ServiceCards from '@/components/ServiceCards';
 
+const CAL_URL = 'https://cal.com/zerotaxify';
+
 export const metadata = {
   title: 'Services | ZeroTaxify',
   description: 'Indian personal tax, corporate tax, and US tax services by ZeroTaxify.'
@@ -19,7 +21,7 @@ export default function ServicesPage() {
               ZeroTaxify provides complete execution plus advisory.
             </p>
             <div className="hero-cta">
-              <Link className="btn btn-primary" href="/contact">Book Service Call</Link>
+              <a className="btn btn-primary" href={CAL_URL} target="_blank" rel="noopener noreferrer">Schedule a Call</a>
               <Link className="btn btn-secondary" href="/contact">Request Proposal</Link>
             </div>
           </div>

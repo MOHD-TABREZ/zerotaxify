@@ -44,34 +44,34 @@ const indiaRebate = [
 ];
 
 const usSingleBrackets = [
-  ['Up to $12,400', '10%'],
-  ['$12,401 to $50,400', '12%'],
-  ['$50,401 to $105,700', '22%'],
-  ['$105,701 to $201,775', '24%'],
-  ['$201,776 to $256,225', '32%'],
-  ['$256,226 to $640,600', '35%'],
-  ['Above $640,600', '37%']
+  ['Up to $11,925', '10%'],
+  ['$11,926 to $48,475', '12%'],
+  ['$48,476 to $103,350', '22%'],
+  ['$103,351 to $197,300', '24%'],
+  ['$197,301 to $256,225', '32%'],
+  ['$256,226 to $626,350', '35%'],
+  ['Above $626,350', '37%']
 ];
 
 const usJointBrackets = [
-  ['Up to $24,800', '10%'],
-  ['$24,801 to $100,800', '12%'],
-  ['$100,801 to $211,400', '22%'],
-  ['$211,401 to $403,550', '24%'],
-  ['$403,551 to $512,450', '32%'],
-  ['$512,451 to $768,700', '35%'],
-  ['Above $768,700', '37%']
+  ['Up to $23,850', '10%'],
+  ['$23,851 to $96,950', '12%'],
+  ['$96,951 to $206,700', '22%'],
+  ['$206,701 to $394,600', '24%'],
+  ['$394,601 to $501,050', '32%'],
+  ['$501,051 to $751,600', '35%'],
+  ['Above $751,600', '37%']
 ];
 
 const usStandardDeductions = [
-  ['Single', '$16,100'],
-  ['Married Filing Jointly', '$32,200'],
-  ['Married Filing Separately', '$16,100'],
-  ['Head of Household', '$24,150']
+  ['Single', '$15,750'],
+  ['Married Filing Jointly', '$31,500'],
+  ['Married Filing Separately', '$15,750'],
+  ['Head of Household', '$23,625']
 ];
 
 const indiaSteps = [
-  'Choose the applicable year profile and select your preferred regime option.',
+  'Choose FY 2025-26 (AY 2026-27) and select your preferred regime option.',
   'Select your age bracket if you want old-regime precision for senior/super-senior exemption limits.',
   'Enter gross annual salary before exemptions. Add exempt allowance adjustments separately where relevant.',
   'Add other income and deduction estimates such as savings deductions, insurance, and eligible exemptions.',
@@ -167,8 +167,8 @@ export default function TaxCalculatorPage() {
           <p className="calc-footnote">
             Calculator outputs are planning estimates. Final tax depends on complete return data, eligible credits,
             and official updates by the tax authorities. India calculations follow the current government-notified
-            baseline (new-regime slabs announced in Budget 2025), and US federal values follow IRS published 2026
-            inflation adjustments.
+            baseline (new-regime slabs announced in Budget 2025), and US federal values follow IRS published 2025
+            thresholds with the 2025 OBBB-adjusted standard deduction.
           </p>
         </div>
       </section>
@@ -176,7 +176,7 @@ export default function TaxCalculatorPage() {
       <section className="section">
         <div className="container dual-content-grid">
           <article className="card">
-            <h3>How to Use the India Calculator (FY 2026-27 / AY 2027-28)</h3>
+            <h3>How to Use the India Calculator (FY 2025-26 / AY 2026-27)</h3>
             <ol className="steps-list">
               {indiaSteps.map((step) => (
                 <li key={step}>{step}</li>
@@ -242,7 +242,7 @@ export default function TaxCalculatorPage() {
               rows={indiaSurcharge}
             />
             <RateTable
-              title="Rebate u/s 87A (FY 2026-27)"
+              title="Rebate u/s 87A (FY 2025-26)"
               cols={['Regime', 'Income Limit', 'Max Rebate']}
               rows={indiaRebate}
             />
@@ -261,7 +261,7 @@ export default function TaxCalculatorPage() {
             <div>
               <h3>USA Federal Tax Reference Tables</h3>
               <p>
-                Use these reference tables for planning. Final liability can change with credits, state rules, and
+                These 2025 reference tables are for planning. Final liability can change with credits, state rules, and
                 specific filing circumstances.
               </p>
             </div>
@@ -329,7 +329,9 @@ export default function TaxCalculatorPage() {
               <li>
                 USA federal bracket and standard deduction values:
                 {' '}
-                <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener noreferrer">IRS Revenue Procedure 2025-32 (PDF)</a>
+                <a href="https://www.irs.gov/pub/irs-drop/rp-24-40.pdf" target="_blank" rel="noopener noreferrer">IRS Revenue Procedure 2024-40 (2025 brackets)</a>
+                {' '}and{' '}
+                <a href="https://www.irs.gov/pub/irs-drop/rp-25-45.pdf" target="_blank" rel="noopener noreferrer">IRS Revenue Procedure 2025-45 (2025 standard deduction updates)</a>
               </li>
             </ul>
           </article>

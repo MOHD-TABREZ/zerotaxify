@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+const CAL_URL = 'https://cal.com/zerotaxify';
+
 export const metadata = {
   title: 'About | ZeroTaxify',
   description: 'Learn about ZeroTaxify mission, vision, and advisory team.'
@@ -78,9 +80,9 @@ export default function AboutPage() {
               <li>US federal and state filing support.</li>
               <li>GST, TDS, payroll, and ROC compliance.</li>
             </ul>
-            <Link className="btn btn-primary" href="/contact" style={{ marginTop: 12 }}>
-              Talk to Advisor
-            </Link>
+            <a className="btn btn-primary" href={CAL_URL} target="_blank" rel="noopener noreferrer" style={{ marginTop: 12 }}>
+              Schedule a Call
+            </a>
           </article>
         </div>
       </section>
