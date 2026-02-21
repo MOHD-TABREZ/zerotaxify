@@ -1,0 +1,22 @@
+<svg width="340" height="74" viewBox="0 0 340 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradA" x1="7" y1="8" x2="59" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A84FF"/>
+      <stop offset="1" stop-color="#18C4A2"/>
+    </linearGradient>
+    <linearGradient id="logoGradB" x1="16" y1="17" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F9FEFF"/>
+      <stop offset="1" stop-color="#D8F1FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="4" y="8" width="56" height="56" rx="16" fill="#0D1E42"/>
+  <path d="M32 14L47 21V31.5C47 42.5 40 51.6 32 55.5C24 51.6 17 42.5 17 31.5V21L32 14Z" fill="url(#logoGradA)"/>
+  <path d="M22 26H41L24.5 45H42" stroke="url(#logoGradB)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="44.2" cy="44.2" r="7" fill="#0A84FF"/>
+  <path d="M40.9 44.1L43.1 46.4L47.4 41.8" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="72" y="38" fill="#0E1835" font-family="Sora, Outfit, Arial, sans-serif" font-size="29" font-weight="770" letter-spacing="-0.5">Zero</text>
+  <text x="133" y="38" fill="url(#logoGradA)" font-family="Sora, Outfit, Arial, sans-serif" font-size="29" font-weight="840" letter-spacing="-0.5">Taxify</text>
+  <text x="74" y="56" fill="#4C618F" font-family="Outfit, Arial, sans-serif" font-size="9.2" font-weight="700" letter-spacing="1.1">INDIA | CORPORATE | USA TAX SOLUTIONS</text>
+</svg>
